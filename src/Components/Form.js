@@ -1,7 +1,7 @@
 import React from "react";
 
 const Form = (props) => {
-    const { change, submit, disabled } = props;
+    const { change, submit, disabled, errors } = props;
     const { name, size, pepperoni, mushrooms, pineapple, peppers, special } = props.value;
     
     const onChange = (e) => {
@@ -17,6 +17,8 @@ const Form = (props) => {
 
     return(
         <div>
+            <p>{errors.name}</p>
+            <p>{errors.special}</p>
             <h2>Order yo pizzaaaa and get out! or stay, up to you</h2>
             <form id='pizza-form' onSubmit={onSubmit}>
                 <label> Pizza order for:
