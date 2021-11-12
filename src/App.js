@@ -1,10 +1,17 @@
 import React from "react";
+import { Link, Route } from 'react-router-dom';
+import Home from "./Components/Home";
+import axios from "axios";
 
 const App = () => {
   return (
     <>
+     <nav>
       <h1>Lambda Eats</h1>
-      <p>You can remove this code and create your own header</p>
+      <p>By Chef Coco</p>
+      <Link to='/'><button id='home-B'>Home</button></Link>
+    </nav>
+      <Route exact path='/' component={Home} />
     </>
   );
 };
