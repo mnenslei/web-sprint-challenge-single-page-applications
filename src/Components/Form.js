@@ -2,7 +2,7 @@ import React from "react";
 
 const Form = (props) => {
     const { change, submit, disabled, errors } = props;
-    const { name, size, pepperoni, mushrooms, pineapple, peppers, special } = props.value;
+    const { name, size, pepperoni, mushrooms, pineapple, peppers, special } = props.values;
     
     const onChange = (e) => {
         const{ name, value, checked, type } = e.target;
@@ -81,6 +81,7 @@ const Form = (props) => {
                         type='text'
                         name='special'
                         value={special}
+                        onChange={onChange}
                     />
                 </label>
                 <div>
